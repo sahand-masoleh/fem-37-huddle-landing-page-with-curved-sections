@@ -11,7 +11,7 @@ $c-p-red-light: #ff4242;
 $c-n-cyan-very-dark: #00252e;
 $c-n-blue-very-pale: #f5faff;
 
-$max-width: 75rem;
+$max-width: 80rem;
 $pad: 1rem;
 
 @mixin max-width($num: $max-width) {
@@ -37,8 +37,8 @@ $pad: 1rem;
 }
 
 .nav {
-	padding: 0 $pad;
 	margin: 5rem 0 10rem 0;
+	padding: 0 $pad;
 
 	&__wrpr {
 		@include max-width;
@@ -67,11 +67,13 @@ $pad: 1rem;
 }
 
 .main {
-	padding: 0 $pad;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .intro {
 	@include max-width(65rem);
+	padding: 0 $pad;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -136,5 +138,78 @@ $pad: 1rem;
 		font-weight: 400;
 		font-size: 1.5rem;
 		color: $c-n-cyan-very-dark;
+	}
+}
+
+.feature {
+	position: relative;
+	margin: 20rem 0;
+	padding: 0 $pad;
+
+	&--even {
+		background-color: $c-n-blue-very-pale;
+
+		&::before {
+			content: url(./images/bg-section-top-desktop-1.svg);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 100%;
+			height: min-content;
+			line-height: 0;
+		}
+
+		&::after {
+			content: url(./images/bg-section-bottom-desktop-1.svg);
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			height: min-content;
+		}
+	}
+
+	&__wrpr {
+		@include max-width;
+		display: flex;
+		align-items: center;
+		gap: 5rem;
+
+		&--even {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__ttl {
+		font-family: $ff-headings;
+		font-size: 2.5rem;
+		color: $c-n-cyan-very-dark;
+	}
+
+	&__txt {
+		font-family: $ff-body;
+		font-weight: 500;
+		font-size: 1rem;
+		color: $c-n-cyan-very-dark;
+	}
+}
+
+.cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	margin: 0 auto;
+	padding: 0 $pad;
+	width: fit-content;
+
+	&__ttl {
+		font-family: $ff-headings;
+		font-size: 2.5rem;
+		color: $c-n-cyan-very-dark;
+	}
+
+	&__btn {
+		@extend .intro__btn;
 	}
 }

@@ -18,11 +18,11 @@
 }
 
 .nav {
-  padding: 0 1rem;
   margin: 5rem 0 10rem 0;
+  padding: 0 1rem;
 }
 .nav__wrpr {
-  max-width: 75rem;
+  max-width: 80rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -46,12 +46,14 @@
 }
 
 .main {
-  padding: 0 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .intro {
   max-width: 65rem;
   margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +73,7 @@
   max-width: 55ch;
   color: #00252e;
 }
-.intro__btn {
+.intro__btn, .cta__btn {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
@@ -109,5 +111,73 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
+  color: #00252e;
+}
+
+.feature {
+  position: relative;
+  margin: 20rem 0;
+  padding: 0 1rem;
+}
+.feature--even {
+  background-color: #f5faff;
+}
+.feature--even::before {
+  content: url(./images/bg-section-top-desktop-1.svg);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  line-height: 0;
+}
+.feature--even::after {
+  content: url(./images/bg-section-bottom-desktop-1.svg);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+.feature__wrpr {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.feature__wrpr--even {
+  flex-direction: row-reverse;
+}
+.feature__ttl {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  color: #00252e;
+}
+.feature__txt {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #00252e;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.cta__ttl {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
   color: #00252e;
 }/*# sourceMappingURL=style.css.map */
