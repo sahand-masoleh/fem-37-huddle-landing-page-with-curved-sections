@@ -1,5 +1,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..700&display=swap");
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image__img {
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: inherit;
+     object-position: inherit;
+}
+
+.nav {
+  padding: 0 1rem;
+  margin: 5rem 0 10rem 0;
+}
+.nav__wrpr {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  height: 2.5rem;
+}
+.nav__btn {
   font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ff52bf;
+  background-color: transparent;
+  border: none;
+  padding: 1ch;
+  max-width: 15ch;
+  width: 100%;
+  outline: 1px solid currentColor;
+  border-radius: 50px;
+}
+
+.main {
+  padding: 0 1rem;
+}
+
+.intro {
+  max-width: 65rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+.intro__ttl {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  color: #00252e;
+}
+.intro__txt {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #00252e;
+  max-width: 55ch;
+  color: #00252e;
+}
+.intro__btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #f5faff;
+  border: none;
+  border-radius: 50px;
+  background-color: #ff52bf;
+  padding: 2.5ch 1ch;
+  max-width: 35ch;
+  width: 100%;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1254901961);
+  margin-bottom: 3rem;
+}
+.intro__stats-cntnr {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.stats__icn {
+  align-self: flex-start;
+  height: 2.5rem;
+}
+.stats__num {
+  font-family: "Open Sans", sans-serif;
+  font-size: 6rem;
+  color: #00252e;
+}
+.stats__desc {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #00252e;
 }/*# sourceMappingURL=style.css.map */

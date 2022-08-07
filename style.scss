@@ -4,13 +4,137 @@ $ff-headings: "Poppins", sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400..700&display=swap");
 $ff-body: "Open Sans", sans-serif;
 
-$c-p-Pink: hsl(322, 100%, 66%);
-$c-p-Pink-light: hsl(321, 100%, 78%);
-$c-p-Red-light: hsl(0, 100%, 63%);
+$c-p-pink: #ff52bf;
+$c-p-pink-light: #ff8fd8;
+$c-p-red-light: #ff4242;
 
-$c-n-Cyan-very-dark: hsl(192, 100%, 9%);
-$c-n-Blue-very-pale: hsl(207, 100%, 98%);
+$c-n-cyan-very-dark: #00252e;
+$c-n-blue-very-pale: #f5faff;
 
-* {
-	font-family: $ff-body;
+$max-width: 75rem;
+$pad: 1rem;
+
+@mixin max-width($num: $max-width) {
+	max-width: $num;
+	margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.image {
+	&__img {
+		height: 100%;
+		max-width: 100%;
+		object-fit: cover;
+		object-position: inherit;
+	}
+}
+
+.nav {
+	padding: 0 $pad;
+	margin: 5rem 0 10rem 0;
+
+	&__wrpr {
+		@include max-width;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		height: 2.5rem;
+	}
+
+	&__btn {
+		font-family: $ff-body;
+		font-weight: 500;
+		font-size: 1rem;
+		color: $c-p-pink;
+		background-color: transparent;
+		border: none;
+		padding: 1ch;
+		max-width: 15ch;
+		width: 100%;
+		outline: 1px solid currentColor;
+		border-radius: 50px;
+	}
+}
+
+.main {
+	padding: 0 $pad;
+}
+
+.intro {
+	@include max-width(65rem);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 3rem;
+
+	&__ttl {
+		font-family: $ff-headings;
+		font-size: 3rem;
+		color: $c-n-cyan-very-dark;
+	}
+
+	&__txt {
+		font-family: $ff-body;
+		font-weight: 500;
+		font-size: 1.3rem;
+		color: $c-n-cyan-very-dark;
+		max-width: 55ch;
+		color: $c-n-cyan-very-dark;
+	}
+
+	&__btn {
+		font-family: $ff-body;
+		font-weight: 700;
+		font-size: 1.1rem;
+		color: $c-n-blue-very-pale;
+		border: none;
+		border-radius: 50px;
+		background-color: $c-p-pink;
+		padding: 2.5ch 1ch;
+		max-width: 35ch;
+		width: 100%;
+		box-shadow: 0 0.5rem 0.5rem #00000020;
+		margin-bottom: 3rem;
+	}
+
+	&__stats-cntnr {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+
+.stats {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	&__icn {
+		align-self: flex-start;
+		height: 2.5rem;
+	}
+
+	&__num {
+		font-family: $ff-body;
+		font-size: 6rem;
+		color: $c-n-cyan-very-dark;
+	}
+
+	&__desc {
+		font-family: $ff-body;
+		font-weight: 400;
+		font-size: 1.5rem;
+		color: $c-n-cyan-very-dark;
+	}
 }
