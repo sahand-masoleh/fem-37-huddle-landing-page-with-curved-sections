@@ -142,18 +142,17 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .intro__stats-container {
     flex-wrap: wrap;
     justify-content: center;
     gap: 5rem;
   }
 }
-@media screen and (max-width: 480px) {
-  .intro__image {
-    margin-bottom: 3rem;
-  }
+.intro__image {
+  margin-bottom: 3rem;
 }
 
 .stats {
@@ -173,7 +172,7 @@
 }
 .stats__num {
   font-family: "Open Sans", sans-serif;
-  font-size: 6rem;
+  font-size: clamp(4rem, 10vw, 6rem);
   color: #00252e;
 }
 @media screen and (max-width: 480px) {
@@ -265,10 +264,12 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 5rem;
+  justify-content: space-between;
+  gap: 2rem;
 }
 @media screen and (max-width: 480px) {
   .feature__wrapper {
+    gap: 5rem;
     flex-wrap: wrap;
     text-align: center;
   }
@@ -278,7 +279,7 @@
 }
 .feature__title {
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   color: #00252e;
   margin-bottom: 1ch;
 }
@@ -292,6 +293,7 @@
   font-weight: 500;
   font-size: 1rem;
   color: #00252e;
+  max-width: 50ch;
 }
 @media screen and (max-width: 480px) {
   .feature__text {
@@ -299,8 +301,7 @@
   }
 }
 .feature__image {
-  max-width: 16rem;
-  margin: 0 auto;
+  width: 30rem;
 }
 
 .cta {
