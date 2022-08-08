@@ -81,7 +81,7 @@
 }
 
 .intro {
-  max-width: 65rem;
+  max-width: 70rem;
   margin: 0 auto;
   padding: 0 min(2rem, 10%);
   display: flex;
