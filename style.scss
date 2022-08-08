@@ -42,7 +42,7 @@ $pad: 1rem;
 	padding: 0 $pad;
 	max-width: $page-width;
 
-	&__wrpr {
+	&__wrapper {
 		@include max-width;
 		display: flex;
 		justify-content: space-between;
@@ -53,7 +53,7 @@ $pad: 1rem;
 		height: 2.5rem;
 	}
 
-	&__btn {
+	&__button {
 		font-family: $ff-body;
 		font-weight: 500;
 		font-size: 1rem;
@@ -63,8 +63,13 @@ $pad: 1rem;
 		padding: 1ch;
 		max-width: 15ch;
 		width: 100%;
-		outline: 1px solid currentColor;
+		outline: 2px solid currentColor;
 		border-radius: 50px;
+
+		&:hover {
+			cursor: pointer;
+			opacity: 0.5;
+		}
 	}
 }
 
@@ -82,13 +87,13 @@ $pad: 1rem;
 	text-align: center;
 	gap: 3rem;
 
-	&__ttl {
+	&__title {
 		font-family: $ff-headings;
 		font-size: 3rem;
 		color: $c-n-cyan-very-dark;
 	}
 
-	&__txt {
+	&__text {
 		font-family: $ff-body;
 		font-weight: 500;
 		font-size: 1.3rem;
@@ -97,7 +102,7 @@ $pad: 1rem;
 		color: $c-n-cyan-very-dark;
 	}
 
-	&__btn {
+	&__button {
 		font-family: $ff-body;
 		font-weight: 700;
 		font-size: 1.1rem;
@@ -110,9 +115,14 @@ $pad: 1rem;
 		width: 100%;
 		box-shadow: 0 0.5rem 0.5rem #00000020;
 		margin-bottom: 3rem;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $c-p-pink-light;
+		}
 	}
 
-	&__stats-cntnr {
+	&__stats-container {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
@@ -124,7 +134,7 @@ $pad: 1rem;
 	flex-direction: column;
 	gap: 0.5rem;
 
-	&__icn {
+	&__icon {
 		align-self: flex-start;
 		height: 2.5rem;
 	}
@@ -193,7 +203,7 @@ $pad: 1rem;
 		}
 	}
 
-	&__wrpr {
+	&__wrapper {
 		@include max-width;
 		display: flex;
 		align-items: center;
@@ -204,13 +214,13 @@ $pad: 1rem;
 		}
 	}
 
-	&__ttl {
+	&__title {
 		font-family: $ff-headings;
 		font-size: 2.5rem;
 		color: $c-n-cyan-very-dark;
 	}
 
-	&__txt {
+	&__text {
 		font-family: $ff-body;
 		font-weight: 500;
 		font-size: 1rem;
@@ -227,14 +237,14 @@ $pad: 1rem;
 	padding: 0 $pad;
 	width: fit-content;
 
-	&__ttl {
+	&__title {
 		font-family: $ff-headings;
 		font-size: 2.5rem;
 		color: $c-n-cyan-very-dark;
 	}
 
-	&__btn {
-		@extend .intro__btn;
+	&__button {
+		@extend .intro__button;
 	}
 }
 
@@ -256,7 +266,7 @@ $pad: 1rem;
 		line-height: 0;
 	}
 
-	&__wrpr {
+	&__wrapper {
 		@include max-width;
 		display: flex;
 		justify-content: space-between;
@@ -264,7 +274,7 @@ $pad: 1rem;
 		gap: 1rem;
 	}
 
-	&__clmn {
+	&__column {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
@@ -274,7 +284,7 @@ $pad: 1rem;
 		height: 2.2rem;
 	}
 
-	&__ttl {
+	&__title {
 		font-family: $ff-body;
 		font-weight: 600;
 		font-size: 1.5rem;
@@ -282,12 +292,12 @@ $pad: 1rem;
 		color: $c-n-blue-very-pale;
 	}
 
-	&__txt {
+	&__text {
 		font-family: $ff-body;
 		color: $c-n-blue-very-pale;
 		line-height: 3ch;
 
-		&--sml {
+		&--small {
 			font-size: 0.8rem;
 			max-width: 18rem;
 		}
@@ -299,7 +309,7 @@ $pad: 1rem;
 		gap: 2ch;
 	}
 
-	&__icn {
+	&__icon {
 		height: 2.5ch;
 	}
 
@@ -333,9 +343,14 @@ $pad: 1rem;
 		font-size: 1rem;
 		font-weight: 600;
 		color: $c-n-blue-very-pale;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $c-p-pink-light;
+		}
 	}
 
-	&__social-cntnr {
+	&__social-container {
 		flex-basis: 100%;
 		display: flex;
 		gap: min(2rem, 5%);

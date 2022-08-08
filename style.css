@@ -22,7 +22,7 @@
   padding: 0 1rem;
   max-width: 1440px;
 }
-.nav__wrpr {
+.nav__wrapper {
   max-width: 80rem;
   margin: 0 auto;
   display: flex;
@@ -32,7 +32,7 @@
 .nav__logo {
   height: 2.5rem;
 }
-.nav__btn {
+.nav__button {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -42,8 +42,12 @@
   padding: 1ch;
   max-width: 15ch;
   width: 100%;
-  outline: 1px solid currentColor;
+  outline: 2px solid currentColor;
   border-radius: 50px;
+}
+.nav__button:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .main {
@@ -61,12 +65,12 @@
   text-align: center;
   gap: 3rem;
 }
-.intro__ttl {
+.intro__title {
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
   color: #00252e;
 }
-.intro__txt {
+.intro__text {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
@@ -74,7 +78,7 @@
   max-width: 55ch;
   color: #00252e;
 }
-.intro__btn, .cta__btn {
+.intro__button, .cta__button {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
@@ -88,7 +92,11 @@
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1254901961);
   margin-bottom: 3rem;
 }
-.intro__stats-cntnr {
+.intro__button:hover, .cta__button:hover {
+  cursor: pointer;
+  background-color: #ff8fd8;
+}
+.intro__stats-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -99,7 +107,7 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-.stats__icn {
+.stats__icon {
   align-self: flex-start;
   height: 2.5rem;
 }
@@ -158,22 +166,22 @@
 .feature--two::after {
   content: url(./images/bg-section-bottom-desktop-2.svg);
 }
-.feature__wrpr {
+.feature__wrapper {
   max-width: 80rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 5rem;
 }
-.feature__wrpr--even {
+.feature__wrapper--even {
   flex-direction: row-reverse;
 }
-.feature__ttl {
+.feature__title {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   color: #00252e;
 }
-.feature__txt {
+.feature__text {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -191,7 +199,7 @@
   width: -moz-fit-content;
   width: fit-content;
 }
-.cta__ttl {
+.cta__title {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   color: #00252e;
@@ -215,7 +223,7 @@
   height: min-content;
   line-height: 0;
 }
-.footer__wrpr {
+.footer__wrapper {
   max-width: 80rem;
   margin: 0 auto;
   display: flex;
@@ -223,7 +231,7 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
-.footer__clmn {
+.footer__column {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -231,19 +239,19 @@
 .footer__logo {
   height: 2.2rem;
 }
-.footer__ttl {
+.footer__title {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #f5faff;
 }
-.footer__txt {
+.footer__text {
   font-family: "Open Sans", sans-serif;
   color: #f5faff;
   line-height: 3ch;
 }
-.footer__txt--sml {
+.footer__text--small {
   font-size: 0.8rem;
   max-width: 18rem;
 }
@@ -252,7 +260,7 @@
   align-items: center;
   gap: 2ch;
 }
-.footer__icn {
+.footer__icon {
   height: 2.5ch;
 }
 .footer__form {
@@ -284,7 +292,11 @@
   font-weight: 600;
   color: #f5faff;
 }
-.footer__social-cntnr {
+.footer__button:hover {
+  cursor: pointer;
+  background-color: #ff8fd8;
+}
+.footer__social-container {
   flex-basis: 100%;
   display: flex;
   gap: min(2rem, 5%);
