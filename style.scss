@@ -435,7 +435,12 @@ $breakpoint: 480px;
 
 		@media screen and (max-width: $breakpoint) {
 			grid-template-columns: 1fr;
+			gap: 2rem;
 		}
+	}
+
+	&__email-container {
+		position: relative;
 	}
 
 	&__email {
@@ -444,11 +449,21 @@ $breakpoint: 480px;
 		border: none;
 		border-radius: 0.25rem;
 		height: 3rem;
+		width: 100%;
 		cursor: pointer;
+		font-size: 1rem;
 
 		&:focus-visible {
 			outline: 1px solid $c-p-pink;
 		}
+	}
+
+	&__error {
+		position: absolute;
+		font-family: $ff-body;
+		font-size: 0.7rem;
+		margin: 1ch 0;
+		color: $c-p-red-light;
 	}
 
 	&__button {
@@ -477,7 +492,7 @@ $breakpoint: 480px;
 		display: flex;
 		gap: min(2rem, 5%);
 		margin-top: 5rem;
-		margin-bottom: 1ch;
+		margin-bottom: 2ch;
 	}
 
 	&__social {

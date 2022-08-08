@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="./app.js" defer></script>
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
 </head>
 
@@ -91,8 +92,11 @@
         <p class="footer__text footer__text--small">To recieve tips on how to grow your community, sign up to our weekly
           newsletter. We’ll
           never send you spam or pass on your email address</p>
-        <form class="footer__form" novalidate>
-          <input type="email" name="email" class="footer__email" id="email">
+        <form class="footer__form" id="form" novalidate>
+          <div class="footer__email-container">
+            <input type="email" name="email" class="footer__email" id="input">
+            <div class="footer__error" id="error" hidden>Check you email please</div>
+          </div>
           <button type="submit" class="footer__button">Subscribe</button>
         </form>
       </div>
