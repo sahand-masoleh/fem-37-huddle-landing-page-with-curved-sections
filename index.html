@@ -40,7 +40,7 @@
     </section>
 
     <section class="features">
-      <div class="feature feature--even">
+      <div class="feature feature--one">
         <div class="feature__wrpr feature__wrpr--even">
           <div class="feature__img image"><img src="./images/illustration-grow-together.svg" alt="" class="image__img">
           </div>
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="feature feature--odd">
+      <div class="feature feature--none">
         <div class="feature__wrpr feature__wrpr--odd">
           <div class="feature__img image"><img src="./images/illustration-flowing-conversation.svg" alt=""
               class="image__img"></div>
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="feature feature--even">
+      <div class="feature feature--two">
         <div class="feature__wrpr feature__wrpr--even">
           <div class="feature__img image"><img src="./images/illustration-your-users.svg" alt="" class="image__img">
           </div>
@@ -84,32 +84,38 @@
 
   <footer class="footer">
     <div class="footer__wrpr">
-      <div class="footer__clmn">
-        <div class="footer__logo image"><img src="./images/logo.svg" alt="Huddle Logo" class="image__img"></div>
-        <p class="footer__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit
+      <div class="footer__clmn footer__clmn--left">
+        <div class="footer__logo image"><img src="./images/logo-white.svg" alt="Huddle Logo" class="image__img"></div>
+        <p class="footer__txt footer__txt--sml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla
+          quam, hendrerit
           lacinia vestibulum a, ultrices quis sem.</p>
         <div class="footer__info">
           <div class="footer__icn image"><img src="./images/icon-phone.svg" alt="" class="image__img"></div>
-          <p class="footer__txt">Phone: +1-543-123-4567</p>
+          <p class="footer__txt footer__txt--lrg">Phone: +1-543-123-4567</p>
         </div>
         <div class="footer__info">
           <div class="footer__icn image"><img src="./images/icon-email.svg" alt="" class="image__img"></div>
-          <p class="footer__txt">example@huddle.com</p>
+          <p class="footer__txt footer__txt--lrg">example@huddle.com</p>
         </div>
       </div>
-      <div class="footer__clmn">
+      <div class="footer__clmn footer__clmn--rght">
         <h3 class="footer__ttl">Newsletter</h3>
-        <p class="footer__txt">To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll
+        <p class="footer__txt footer__txt--sml">To recieve tips on how to grow your community, sign up to our weekly
+          newsletter. We’ll
           never send you spam or pass on your email address</p>
-        <button class="footer__btn">Subscribe</button>
+        <form class="footer__form" novalidate>
+          <input type="email" name="email" class="footer__email" id="email">
+          <button type="submit" class="footer__button">Subscribe</button>
+        </form>
       </div>
       <div class="footer__social-cntnr">
-        <div class="social image"><img src="" alt="" class="image__img"></div>
-        <div class="social image"><img src="" alt="" class="image__img"></div>
-        <div class="social image"><img src="" alt="" class="image__img"></div>
+        <div class="footer__social image"><img src="./images/facebook.svg" alt="facebook" class="image__img"></div>
+        <div class="footer__social image"><img src="./images/instagram.svg" alt="instagram" class="image__img"></div>
+        <div class="footer__social image"><img src="./images/twitter.svg" alt="twitter" class="image__img"></div>
       </div>
-      <div class="footer__attr">Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank">Frontend Mentor</a>. Coded by <a href="#" target="_blank">Sahand Masoleh</a>.</div>
+      <div class="footer__attribution">Challenge by <a class="footer__link"
+          href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+          class="footer__link" href="#" target="_blank">Sahand Masoleh</a>.</div>
     </div>
   </footer>
 
