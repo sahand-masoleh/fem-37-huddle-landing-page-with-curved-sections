@@ -12,12 +12,20 @@ $c-n-cyan-very-dark: #00252e;
 $c-n-blue-very-pale: #f5faff;
 
 $max-width: 80rem;
-$page-width: 1440px;
-$pad: 1rem;
+$pad: min(2rem, 10%);
+$breakpoint: 480px;
 
 @mixin max-width($num: $max-width) {
 	max-width: $num;
 	margin: 0 auto;
+}
+
+@mixin page-width {
+	max-width: 1440px;
+
+	@media screen and (max-width: $breakpoint) {
+		max-width: 375px;
+	}
 }
 
 *,
@@ -26,6 +34,9 @@ $pad: 1rem;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+.body {
 }
 
 .image {
@@ -40,7 +51,11 @@ $pad: 1rem;
 .nav {
 	margin: 5rem auto 10rem auto;
 	padding: 0 $pad;
-	max-width: $page-width;
+	@include page-width;
+
+	@media screen and (max-width: $breakpoint) {
+		margin: 2rem auto 5rem auto;
+	}
 
 	&__wrapper {
 		@include max-width;
@@ -51,6 +66,10 @@ $pad: 1rem;
 
 	&__logo {
 		height: 2.5rem;
+
+		@media screen and (max-width: $breakpoint) {
+			height: 1rem;
+		}
 	}
 
 	&__button {
@@ -68,13 +87,17 @@ $pad: 1rem;
 
 		&:hover {
 			cursor: pointer;
-			opacity: 0.5;
+			color: $c-p-pink-light;
+		}
+
+		@media screen and (max-width: $breakpoint) {
+			font-size: 0.6rem;
 		}
 	}
 }
 
 .main {
-	max-width: $page-width;
+	@include page-width;
 	margin: 0 auto;
 }
 
@@ -91,6 +114,10 @@ $pad: 1rem;
 		font-family: $ff-headings;
 		font-size: 3rem;
 		color: $c-n-cyan-very-dark;
+
+		@media screen and (max-width: $breakpoint) {
+			font-size: 1.5rem;
+		}
 	}
 
 	&__text {
@@ -100,6 +127,10 @@ $pad: 1rem;
 		color: $c-n-cyan-very-dark;
 		max-width: 55ch;
 		color: $c-n-cyan-very-dark;
+
+		@media screen and (max-width: $breakpoint) {
+			font-size: 0.9rem;
+		}
 	}
 
 	&__button {
@@ -116,6 +147,12 @@ $pad: 1rem;
 		box-shadow: 0 0.5rem 0.5rem #00000020;
 		margin-bottom: 3rem;
 
+		@media screen and (max-width: $breakpoint) {
+			font-size: 0.8rem;
+			padding: 1.5ch 1ch;
+			max-width: 30ch;
+		}
+
 		&:hover {
 			cursor: pointer;
 			background-color: $c-p-pink-light;
@@ -126,23 +163,44 @@ $pad: 1rem;
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+
+		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 5rem;
+		}
+	}
+
+	&__image {
+		@media screen and (max-width: $breakpoint) {
+			margin-bottom: 3rem;
+		}
 	}
 }
 
 .stats {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	gap: 0.5rem;
 
 	&__icon {
 		align-self: flex-start;
 		height: 2.5rem;
+
+		@media screen and (max-width: $breakpoint) {
+			height: 1.8rem;
+		}
 	}
 
 	&__num {
 		font-family: $ff-body;
 		font-size: 6rem;
 		color: $c-n-cyan-very-dark;
+
+		@media screen and (max-width: $breakpoint) {
+			font-size: 3.5rem;
+		}
 	}
 
 	&__desc {
@@ -150,6 +208,10 @@ $pad: 1rem;
 		font-weight: 400;
 		font-size: 1.5rem;
 		color: $c-n-cyan-very-dark;
+
+		@media screen and (max-width: $breakpoint) {
+			font-size: 0.9rem;
+		}
 	}
 }
 
@@ -158,11 +220,15 @@ $pad: 1rem;
 	margin: 20rem 0;
 	padding: 0 $pad;
 
+	@media screen and (max-width: $breakpoint) {
+		padding: 5rem $pad;
+		margin: 5rem 0;
+	}
+
 	&--one,
 	&--two {
 		background-color: $c-n-blue-very-pale;
 		&::before {
-			content: url(./images/bg-section-top-desktop-1.svg);
 			overflow: hidden;
 			position: absolute;
 			left: 0;
@@ -173,7 +239,6 @@ $pad: 1rem;
 		}
 
 		&::after {
-			content: url(./images/bg-section-bottom-desktop-1.svg);
 			overflow: hidden;
 			position: absolute;
 			left: 0;
@@ -186,20 +251,36 @@ $pad: 1rem;
 	&--one {
 		&::before {
 			content: url(./images/bg-section-top-desktop-1.svg);
+
+			@media screen and (max-width: $breakpoint) {
+				content: url(./images/bg-section-top-mobile-1.svg);
+			}
 		}
 
 		&::after {
 			content: url(./images/bg-section-bottom-desktop-1.svg);
+
+			@media screen and (max-width: $breakpoint) {
+				content: url(./images/bg-section-bottom-mobile-1.svg);
+			}
 		}
 	}
 
 	&--two {
 		&::before {
 			content: url(./images/bg-section-top-desktop-2.svg);
+
+			@media screen and (max-width: $breakpoint) {
+				content: url(./images/bg-section-top-mobile-2.svg);
+			}
 		}
 
 		&::after {
 			content: url(./images/bg-section-bottom-desktop-2.svg);
+
+			@media screen and (max-width: $breakpoint) {
+				content: url(./images/bg-section-bottom-mobile-2.svg);
+			}
 		}
 	}
 
@@ -208,6 +289,11 @@ $pad: 1rem;
 		display: flex;
 		align-items: center;
 		gap: 5rem;
+
+		@media screen and (max-width: $breakpoint) {
+			flex-wrap: wrap;
+			text-align: center;
+		}
 
 		&--even {
 			flex-direction: row-reverse;
@@ -218,6 +304,11 @@ $pad: 1rem;
 		font-family: $ff-headings;
 		font-size: 2.5rem;
 		color: $c-n-cyan-very-dark;
+		margin-bottom: 1ch;
+
+		@media screen and (max-width: $breakpoint) {
+			font-size: 1.2rem;
+		}
 	}
 
 	&__text {
@@ -225,6 +316,15 @@ $pad: 1rem;
 		font-weight: 500;
 		font-size: 1rem;
 		color: $c-n-cyan-very-dark;
+
+		@media screen and (max-width: $breakpoint) {
+			font-size: 0.9rem;
+		}
+	}
+
+	&__image {
+		max-width: 16rem;
+		margin: 0 auto;
 	}
 }
 
@@ -236,11 +336,16 @@ $pad: 1rem;
 	margin: 0 auto;
 	padding: 0 $pad;
 	width: fit-content;
+	text-align: center;
 
 	&__title {
 		font-family: $ff-headings;
 		font-size: 2.5rem;
 		color: $c-n-cyan-very-dark;
+
+		@media screen and (max-width: $breakpoint) {
+			font-size: 1.5rem;
+		}
 	}
 
 	&__button {
@@ -253,7 +358,7 @@ $pad: 1rem;
 	margin: 15rem auto 0 auto;
 	padding: 5rem $pad;
 	background-color: $c-n-cyan-very-dark;
-	max-width: $page-width;
+	@include page-width;
 
 	&::before {
 		content: url(./images/bg-footer-top-desktop.svg);
@@ -264,14 +369,24 @@ $pad: 1rem;
 		bottom: 100%;
 		height: min-content;
 		line-height: 0;
+
+		@media screen and (max-width: $breakpoint) {
+			content: url(./images/bg-footer-top-mobile.svg);
+		}
 	}
 
 	&__wrapper {
 		@include max-width;
 		display: flex;
+		flex-direction: row-reverse;
 		justify-content: space-between;
-		flex-wrap: wrap;
 		gap: 1rem;
+
+		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			gap: 5rem;
+		}
 	}
 
 	&__column {
@@ -317,7 +432,10 @@ $pad: 1rem;
 		display: grid;
 		grid-template-columns: minmax(min-content, 18rem) minmax(min-content, 15ch);
 		gap: min(2rem, 10%);
-		height: 3rem;
+
+		@media screen and (max-width: $breakpoint) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__email {
@@ -325,6 +443,7 @@ $pad: 1rem;
 		padding: 0 1rem;
 		border: none;
 		border-radius: 0.25rem;
+		height: 3rem;
 		cursor: pointer;
 
 		&:focus-visible {
@@ -336,6 +455,7 @@ $pad: 1rem;
 		padding: 1ch;
 		max-width: 15ch;
 		width: 100%;
+		height: 3rem;
 		border: none;
 		background-color: $c-p-pink;
 		border-radius: 0.25rem;
@@ -343,6 +463,7 @@ $pad: 1rem;
 		font-size: 1rem;
 		font-weight: 600;
 		color: $c-n-blue-very-pale;
+		margin-left: auto;
 
 		&:hover {
 			cursor: pointer;
@@ -351,10 +472,12 @@ $pad: 1rem;
 	}
 
 	&__social-container {
+		@include max-width;
 		flex-basis: 100%;
 		display: flex;
 		gap: min(2rem, 5%);
 		margin-top: 5rem;
+		margin-bottom: 1ch;
 	}
 
 	&__social {
@@ -376,11 +499,12 @@ $pad: 1rem;
 	}
 
 	&__attribution {
-		margin-left: auto;
+		@include max-width;
 		font-family: $ff-body;
 		font-size: 0.8rem;
 		font-weight: 500;
 		color: $c-n-blue-very-pale;
+		text-align: start;
 	}
 
 	&__link {
